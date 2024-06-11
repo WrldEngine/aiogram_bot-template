@@ -14,7 +14,7 @@ class Users(Base):
     name: Mapped[str]
     locale: Mapped[str] = mapped_column(String(length=2), nullable=True)
     notifications: Mapped[bool] = mapped_column(default=False)
-    subscription: Mapped["Subscriptions"] = relationship(backref="users", lazy="subquery")
+    subscription: Mapped["Subscriptions"] = relationship(backref="users")
     balance: Mapped[int] = mapped_column(DECIMAL(precision=100, scale=3), default=0)
 
     @property
