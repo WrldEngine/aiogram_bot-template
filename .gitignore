@@ -7,6 +7,10 @@ __pycache__/
 .idea
 .vscode
 
+# docker compose files
+
+docker-compose.yml
+
 # C extensions
 *.so
 
@@ -80,7 +84,3 @@ celerybeat.pid
 
 # Environments
 .env
-
-# docker compose files
-
-docker-compose.yml
