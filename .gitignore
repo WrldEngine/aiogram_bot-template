@@ -7,6 +7,10 @@ __pycache__/
 .idea
 .vscode
 
+# docker compose files
+
+docker-compose.yml
+
 # C extensions
 *.so
 
@@ -77,9 +81,6 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
-# docker compose
-docker-compose.yml
 
 # Environments
 .env
