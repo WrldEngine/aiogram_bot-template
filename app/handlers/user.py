@@ -8,7 +8,7 @@ from aiogram.methods import TelegramMethod
 from aiogram_i18n import I18nContext
 
 from app.repositories import UserRepository
-from app.models import Users
+from app.models import Users, Subscriptions
 from app.filters import ChatTypeFilter
 from app.keyboards import inline
 
@@ -28,6 +28,11 @@ async def cmd_start(
         text=i18n.messages.start(name=user.mention),
         reply_markup=inline.agreement_kb(i18n),
     )
+
+
+@router.message(Command("me"))
+async def cmd_profile(message: Message, user: Users) -> TelegramMethod[Any]:
+    await message.answer(user.subscription.type)
 
 
 @router.callback_query(F.data == "yes")
