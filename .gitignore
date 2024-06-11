@@ -78,5 +78,8 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Docker-compose file
+docker-compose.yml
+
 # Environments
 .env
